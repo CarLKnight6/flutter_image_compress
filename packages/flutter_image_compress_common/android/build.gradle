@@ -24,9 +24,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
-    if (project.android.hasProperty("namespace")) {
-        namespace 'com.fluttercandies.flutter_image_compress'
-    }
+    namespace 'com.fluttercandies.flutter_image_compress' // always set
 
     compileSdkVersion 34
 
@@ -44,7 +42,6 @@ android {
     }
 
     compileOptions {
-        // Sets Java compatibility to Java 11
         sourceCompatibility JavaVersion.VERSION_11
         targetCompatibility JavaVersion.VERSION_11
     }
